@@ -1,4 +1,15 @@
 let drums = document.querySelectorAll(".drum");
+
+for (let i = 0; i < drums.length; i++)
+  drums[i].addEventListener("click", function () {
+    keyCheck(this.innerHTML);
+    buttonAnimation(this.innerHTML);
+  });
+document.addEventListener("keydown", function (e) {
+  keyCheck(e.key);
+  buttonAnimation(e.key);
+});
+
 function keyCheck(e) {
   switch (e) {
     case "a":
@@ -23,10 +34,13 @@ function keyCheck(e) {
       new Audio("./sounds/tom-4.mp3").play();
   }
 }
-for (let i = 0; i < drums.length; i++)
-  drums[i].addEventListener("click", function () {
-    keyCheck(this.innerHTML);
-  });
-document.addEventListener("keydown", function (e) {
-  keyCheck(e.key);
-});
+
+function buttonAnimation(key) {
+  let activeButton = document.querySelector("." + key);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 100);
+}
