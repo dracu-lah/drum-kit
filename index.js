@@ -2,22 +2,22 @@ let drums = document.querySelectorAll(".drum");
 
 function keyCheck(key) {
   switch (key) {
-    case "w":
+    case "a":
       let crash = new Audio("./sounds/crash.mp3");
       crash.play();
       break;
 
-    case "a":
+    case "s":
       let kickBass = new Audio("./sounds/kick-bass.mp3");
       kickBass.play();
       break;
 
-    case "s":
+    case "d":
       let snare = new Audio("./sounds/snare.mp3");
       snare.play();
       break;
 
-    case "d":
+    case "f":
       let tom1 = new Audio("./sounds/tom-1.mp3");
       tom1.play();
       break;
