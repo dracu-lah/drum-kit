@@ -15,19 +15,19 @@ footer {
   font-family: sans-serif;
 }
 
-.w {
+.a {
   background-image: url(/images/crash.png);
 }
 
-.a {
+.s {
   background-image: url(/images/kick.png);
 }
 
-.s {
+.d {
   background-image: url(/images/snare.png);
 }
 
-.d {
+.f {
   background-image: url(/images/tom1.png);
 }
 
